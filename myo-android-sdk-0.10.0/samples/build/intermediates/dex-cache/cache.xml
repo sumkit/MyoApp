@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/Users/sunnysummer5/Desktop/myo-android-sdk-0.10.0/samples/HelloWorld/build/intermediates/exploded-aar/com.thalmic/myosdk/0.10.0/classes.jar"
+        jar="/Users/sunnysummer5/MyoApp/myo-android-sdk-0.10.0/samples/HelloWorld/build/intermediates/exploded-aar/com.thalmic/myosdk/0.10.0/classes.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="d189db75174a41996c33bb243d2228aacf10fa53">
-        <dex dex="/Users/sunnysummer5/Desktop/myo-android-sdk-0.10.0/samples/HelloWorld/build/intermediates/pre-dexed/debug/classes-812a85a033a1606f608fc2dd0545b43650eab385.jar" />
+        <dex dex="/Users/sunnysummer5/MyoApp/myo-android-sdk-0.10.0/samples/HelloWorld/build/intermediates/pre-dexed/debug/classes-ce54f22d2864dd16ffda5b81bc35414f9036f9d4.jar" />
     </item>
     <item
-        jar="/Users/sunnysummer5/Desktop/myo-android-sdk-0.10.0/samples/HelloWorld/build/intermediates/exploded-aar/com.thalmic/myosdk/0.10.0/libs/native-libs.jar"
+        jar="/Users/sunnysummer5/MyoApp/myo-android-sdk-0.10.0/samples/HelloWorld/build/intermediates/exploded-aar/com.thalmic/myosdk/0.10.0/libs/native-libs.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="d24ac9790966ffbd1bd9d921a262572c94903027">
-        <dex dex="/Users/sunnysummer5/Desktop/myo-android-sdk-0.10.0/samples/HelloWorld/build/intermediates/pre-dexed/debug/native-libs-675c833a0a49b40200316659de8bf7cbd32bb41c.jar" />
+        <dex dex="/Users/sunnysummer5/MyoApp/myo-android-sdk-0.10.0/samples/HelloWorld/build/intermediates/pre-dexed/debug/native-libs-85ba3637d921e6aa1fb3b80f99b4c3e4c1784874.jar" />
     </item>
 
 </items>

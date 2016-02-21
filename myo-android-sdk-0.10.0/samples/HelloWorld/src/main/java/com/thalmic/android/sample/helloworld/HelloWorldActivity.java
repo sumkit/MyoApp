@@ -72,6 +72,7 @@ public class HelloWorldActivity extends Activity  {
         // policy, that means poses will now be delivered to the listener.
         @Override
         public void onUnlock(Myo myo, long timestamp) {
+            Log.e("here", "here");
             mLockStateView.setText(R.string.unlocked);
         }
 
@@ -113,11 +114,11 @@ public class HelloWorldActivity extends Activity  {
             String dirString = "";
             float rollDir = roll-preRoll;
 
-            if(rollDir > 60) {
+            if(rollDir > 80) {
                 dirString="on";
                 input = "11111111";
             }
-            else if(rollDir < -60) {
+            else if(rollDir < -80) {
                 dirString="off";
                 input="00000000";
             }
@@ -151,12 +152,14 @@ public class HelloWorldActivity extends Activity  {
 
             prevInput = input;
             prevYaw=yaw;
+            preRoll=roll;
             try {
                 TimeUnit.MILLISECONDS.sleep(500);
             } catch (InterruptedException e) {
                 Log.e("HelloWorldActivity", "InterruptedException",e);
                 e.printStackTrace();
             }
+            Log.e("fuck3 unlocked", String.valueOf(myo.isUnlocked()));
         }
 
         // onPose() is called whenever a Myo provides a new pose.
@@ -164,6 +167,7 @@ public class HelloWorldActivity extends Activity  {
         public void onPose(Myo myo, long timestamp, Pose pose) {
             // Handle the cases of the Pose enumeration, and change the text of the text view
             // based on the pose we receive.
+            String input="";
             switch (pose) {
                 case UNKNOWN:
                     mTextView.setText(getString(R.string.hello_world));
@@ -185,10 +189,26 @@ public class HelloWorldActivity extends Activity  {
                     mTextView.setText(getString(R.string.pose_fist));
                     break;
                 case WAVE_IN:
+                    input = "10101010"; //left
                     mTextView.setText(getString(R.string.pose_wavein));
+                    new Server(input).execute();
+                    try {
+                        TimeUnit.MILLISECONDS.sleep(500);
+                    } catch (InterruptedException e) {
+                        Log.e("HelloWorldActivity", "InterruptedException",e);
+                        e.printStackTrace();
+                    }
                     break;
                 case WAVE_OUT:
+                    input = "01010101"; //right
                     mTextView.setText(getString(R.string.pose_waveout));
+                    new Server(input).execute();
+                    try {
+                        TimeUnit.MILLISECONDS.sleep(500);
+                    } catch (InterruptedException e) {
+                        Log.e("HelloWorldActivity", "InterruptedException",e);
+                        e.printStackTrace();
+                    }
                     break;
                 case FINGERS_SPREAD:
                     mTextView.setText(getString(R.string.pose_fingersspread));
